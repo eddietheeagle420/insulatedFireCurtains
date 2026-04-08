@@ -56,7 +56,7 @@ footer {
 .text-image-row {
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* two equal columns */
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 
