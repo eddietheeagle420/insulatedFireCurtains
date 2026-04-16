@@ -29,8 +29,6 @@ body {
 }
 
 nav {
-  position: sticky;
-  top: 79px; /* height of header */
   z-index: 99;
   background: linear-gradient(
     to right,
@@ -84,4 +82,36 @@ footer {
   text-align: center;
   top: 50%;
   transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+  .my-header {
+    flex-direction: column;
+    padding: 10px;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .my-header h1 {
+    font-size: 1.1rem;
+  }
+
+  .my-header img {
+    height: 45px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    padding: 8px 10px;
+  }
+
+  .hero {
+    height: 250px;
+  }
+
+  .hero-title {
+    font-size: 1rem;
+  }
 }

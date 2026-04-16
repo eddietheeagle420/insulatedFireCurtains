@@ -93,3 +93,13 @@ nav button:hover::before, nav a:hover::before {
 .slide.active {
   opacity: 1;
 }
+
+@media (max-width: 768px) {
+  .text-image-row {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
