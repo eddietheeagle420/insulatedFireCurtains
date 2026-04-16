@@ -86,6 +86,7 @@ footer {
 
 @media (max-width: 768px) {
   .my-header {
+    position: static; /* Keep header in normal flow on mobile */
     flex-direction: column;
     padding: 10px;
     gap: 8px;
