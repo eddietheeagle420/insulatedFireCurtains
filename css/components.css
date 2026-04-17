@@ -50,6 +50,7 @@ nav button:hover::before, nav a:hover::before {
 }
 
 /* --- Gallery --- */
+
 .gallery {
   flex: 1;
   display: grid;
@@ -94,6 +95,42 @@ nav button:hover::before, nav a:hover::before {
   opacity: 1;
 }
 
+
+.text-image-row.has-side-list {
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  align-items: stretch; /* makes the image column fill the row height */
+}
+
+.text-image-row.has-side-list > * {
+  min-width: 0;
+}
+
+.text-image-row.has-side-list .section-text {
+  flex: 1;
+  letter-spacing: 0.04em;
+}
+
+.text-image-row.has-side-list > .section-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+  min-width: 0;
+}
+
+.text-image-row.has-side-list .section-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.text-image-row.has-side-list .section-list {
+  /* your existing or new list styles */
+  padding: 1rem;       /* adjust to taste */
+}
+
 @media (max-width: 768px) {
   .text-image-row {
     grid-template-columns: 1fr;
@@ -102,4 +139,13 @@ nav button:hover::before, nav a:hover::before {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .text-image-row.has-side-list {
+  grid-template-columns: 1fr;
+}
+
+.text-image-row.has-side-list .section-image img {
+  height: 300px; /* or whatever looks good */
+}
+
 }
