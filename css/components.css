@@ -98,8 +98,9 @@ nav button:hover::before, nav a:hover::before {
 
 .text-image-row.has-side-list {
   display: grid;
-  grid-template-columns: 50% 25% 25%;
-  align-items: stretch; /* makes the image column fill the row height */
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2rem; /* keep spacing, now included safely in fr math */
+  align-items: stretch;
 }
 
 .text-image-row.has-side-list > * {
